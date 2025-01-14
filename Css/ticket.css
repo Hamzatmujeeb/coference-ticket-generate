@@ -1,0 +1,252 @@
+/* Base styles for the body */
+body {
+    margin: 0;
+    font-family: "Inconsolata", serif;
+    background: url('../assets/images/background-desktop.png') no-repeat center center fixed,
+                url('../assets/images/pattern-squiggly-line-top.svg') no-repeat top right,
+                url('../assets/images/pattern-squiggly-line-bottom.svg') no-repeat bottom left;
+    background-size: cover, 150px 150px, 150px 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 40px;
+}
+
+/* Styling for the container element */
+.container {
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Styling for the logo section */
+.logo {
+    font-size: 28px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Highlight specific text in orange */
+.highlight {
+    color: #ff5722;
+}
+
+/* Email address styling */
+.email {
+    color: #ff5722;
+}
+
+/* Heading styles */
+h1 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 36px;
+    margin: 3px 0;
+}
+
+/* Ticket styling */
+.ticket {
+    background: linear-gradient(135deg, #3c125b, #531f85);
+    border-radius: 20px;
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+/* Circular cutout decorations on the ticket */
+.ticket::before, .ticket::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #080816;
+    border-radius: 50%;
+}
+
+/* Top circular cutout */
+.ticket::before {
+    top: -15px;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+/* Bottom circular cutout */
+.ticket::after {
+    bottom: -15px;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+/* Dotted line in the ticket */
+.dotted-line {
+    position: absolute;
+    top: 15px;
+    left: 80%;
+    width: 2px;
+    height: calc(100% - 30px);
+    border-left: 2px dashed #b0b0b0;
+    transform: translateX(-50%);
+}
+
+/* Ticket header styling */
+.ticket-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ticket-header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.ticket-header div {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ticket-header span {
+    display: block;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* Ticket body styling */
+.ticket-body {
+    display: flex;
+    align-items: center;
+}
+
+.ticket-body img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.ticket-body div {
+    font-size: 18px;
+}
+
+.ticket-body span {
+    display: block;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+/* Ticket footer with unique ticket ID */
+.ticket-footer {
+    text-align: right;
+    font-size: 14px;
+    color: #b0b0b0;
+    position: absolute;
+    right: 10px;
+    bottom: 80px;
+    transform: translateY(50%) rotate(90deg);
+}
+
+/* Paragraph styling */
+.container p {
+    text-align: center;
+    margin: 15px 0;
+    display: block;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* Styling for the last paragraph */
+.container p:last-of-type {
+    white-space: pre-wrap;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container p:last-of-type span {
+    font-weight: bold;
+}
+
+/* Responsive Media Queries */
+
+/* Adjustments for screens up to 780px wide */
+@media (max-width: 780px) {
+    body {
+        background-size: cover, 120px, 120px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .ticket {
+        max-width: 300px;
+        padding: 20px;
+    }
+}
+
+/* Adjustments for screens up to 580px wide */
+@media (max-width: 580px) {
+    h1 {
+        font-size: 26px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .ticket-body img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Adjustments for screens up to 480px wide */
+@media (max-width: 480px) {
+    body {
+        padding-top: 20px;
+    }
+    h1 {
+        font-size: 22px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .ticket {
+        max-width: 280px;
+        padding: 15px;
+    }
+}
+
+/* Adjustments for screens up to 280px wide */
+@media (max-width: 280px) {
+    h1 {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .container {
+        padding: 20px 10px;
+    }
+    .ticket {
+        max-width: 250px;
+        padding: 10px;
+    }
+}
