@@ -177,6 +177,11 @@ small {
         overflow: hidden;
     }
 
+    /* Hide top and bottom images for smaller devices */
+    .top-image, .bottom-image {
+        display: none;
+    }
+
     .header-logo img {
         width: 25px;
         margin-right: 20px;
@@ -209,6 +214,11 @@ small {
         margin-right: 15px;
     }
 
+    /* Hide top and bottom images for smaller devices */
+    .top-image, .bottom-image {
+        display: none;
+    }
+
     .header-logo .lodo-text {
         font-size: 0.85rem;
     }
@@ -231,6 +241,11 @@ small {
     .header-logo img {
         width: 20px;
         margin-right: 10px;
+    }
+
+     /* Hide top and bottom images for smaller devices */
+     .top-image, .bottom-image {
+        display: none;
     }
 
     .header-logo .lodo-text {
@@ -258,6 +273,11 @@ small {
     .header-logo img {
         width: 18px;
         margin-right: 8px;
+    }
+
+    /* Hide top and bottom images for smaller devices */
+    .top-image, .bottom-image {
+        display: none;
     }
 
     .header-logo .lodo-text {
