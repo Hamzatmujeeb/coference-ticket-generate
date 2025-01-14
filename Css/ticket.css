@@ -2,18 +2,42 @@
 body {
     margin: 0;
     font-family: "Inconsolata", serif;
-    background: url('../assets/images/background-desktop.png') no-repeat center center fixed,
-                url('../assets/images/pattern-squiggly-line-top.svg') no-repeat top right,
-                url('../assets/images/pattern-squiggly-line-bottom.svg') no-repeat bottom left;
-    background-size: cover, 150px 150px, 150px 150px;
+    background: url('../assets/images/background-desktop.png') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
     padding-top: 40px;
+    position: relative;
+    overflow: hidden; /* Prevent scrollbars caused by positioned elements */
 }
 
-/* Styling for the container element */
+/* Top image styles */
+.top-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 550px;
+    height: 420px;
+    background: url('../assets/images/pattern-squiggly-line-top.svg') no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+/* Bottom image styles */
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 550px;
+    height: 350px;
+    background: url('../assets/images/pattern-squiggly-line-bottom.svg') no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+/* Main container styles */
 .container {
     color: white;
     text-align: center;
@@ -22,6 +46,7 @@ body {
     position: relative;
     width: 90%;
     max-width: 500px;
+    z-index: 2; /* Ensure this is above the background images */
 }
 
 /* Styling for the logo section */

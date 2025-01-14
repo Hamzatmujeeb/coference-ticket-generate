@@ -11,6 +11,29 @@ body {
     height: auto;
 }
 
+.top-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 550px;
+    height: 420px;
+    background: url('../assets/images/pattern-squiggly-line-top.svg') no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
+/* Bottom image styles */
+.bottom-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 550px;
+    height: 350px;
+    background: url('../assets/images/pattern-squiggly-line-bottom.svg') no-repeat;
+    background-size: contain;
+    z-index: 1;
+}
+
 /* Header Container */
 .header-container {
     text-align: center;
